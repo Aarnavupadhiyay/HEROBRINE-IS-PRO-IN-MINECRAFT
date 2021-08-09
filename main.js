@@ -18,14 +18,22 @@ function setup() {
   }
   function modelLoded()
   {
-console.log("ModelLoded IS LODED")
+//console.log("ModelLoded IS LODED")
   }
 
   function draw()
 {
 image(video, 0, 0, 500, 500);
+fill("#00ffea")
+stroke("#00ffea")
+circle(leftWristX, leftWristY, 20)
+n = Number(leftWristY);
+rd = floor(n);
+L1000 = rd/1000;
+volume = L1000 *2;
+document.getElementById("vol").innerHTML = "volume ="+volume;
+song.Volume(volume);
 }
-
 function play()
 {
 song.play();
@@ -38,7 +46,7 @@ function gotposes(results)
 if(result.length > 0)
 {
 
-console.log(results)
+//console.log(results)
 
 leftWristX = results[0].pose.leftWrist.X;
 leftWristY = results[0].pose.leftWrist.Y;
@@ -46,9 +54,9 @@ leftWristY = results[0].pose.leftWrist.Y;
 rightWristX = results[0].pose.rightWrist.X;
 rightWristY = results[0].pose.rightWrist.Y;
 
-console.log(leftWristX);
-console.log(leftWristY);
-console.log(rightWristX);
-console.log(rightWristY);
+//console.log(leftWristX);
+//console.log(leftWristY);
+//console.log(rightWristX);
+//console.log(rightWristY);
 }
 }
