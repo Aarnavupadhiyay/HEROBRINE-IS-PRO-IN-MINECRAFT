@@ -32,7 +32,7 @@ rd = floor(n);
 L1000 = rd/1000;
 volume = L1000 *2;
 document.getElementById("vol").innerHTML = "volume ="+volume;
-song.Volume(volume);
+song.setVolume(volume);
 }
 function play()
 {
@@ -43,7 +43,7 @@ song.rate(1)
 
 function gotposes(results)
 {
-if(result.length > 0)
+if(results.length > 0)
 {
 
 //console.log(results)
